@@ -98,6 +98,27 @@ a:nth-of-type(12) {
 }
 
 
+/* & interaction */
+.rotateJump {
+  animation-name: rotateJump;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  transition: ease-in-out;
+}
+
+@keyframes rotateJump {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: translateY(-1em);
+  }
+}
+
+
 /* design interaction */
 .rotateY360deg {
   animation-name: rotateY360deg;

@@ -1,4 +1,4 @@
-let interaction = document.querySelector('a:nth-of-type(12)')
+let interaction = document.querySelector('a:nth-of-type(12)');
 
 interaction.addEventListener('click', jumpHandler)
 interaction.addEventListener('animationend', jumpHandler)
@@ -9,7 +9,7 @@ function jumpHandler() {
 
 
 // Frontend interaction
-let upSideDown = document.querySelector('a:nth-of-type(1)')
+let upSideDown = document.querySelector('a:nth-of-type(1)');
 
 upSideDown.addEventListener('mouseover', flipHandler)
 
@@ -19,7 +19,7 @@ function flipHandler() {
 
 
 // desktop interaction
-let rotateY360deg = document.querySelector('a:nth-of-type(2)')
+let rotateY360deg = document.querySelector('a:nth-of-type(2)');
 
 rotateY360deg.addEventListener('click', rotateHandler)
 
@@ -28,10 +28,23 @@ function rotateHandler() {
 }
 
 
+// & interaction
+let dblClick = document.querySelector('a:nth-of-type(3)');
+
+dblClick.addEventListener('dblclick', rotateJump)
+console.log(dblClick)
+
+function rotateJump() {
+  dblClick.classList.toggle('rotateJump')
+}
+
+
 // Development interaction
+// https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/offsetX
+// https://www.geeksforgeeks.org/how-to-change-background-color-according-to-the-mouse-location-using-javascript/
 let mousePosition = document.querySelector('a:nth-of-type(4)')
 
-mousePosition.addEventListener('mousemove', returnPosition)
+mousePosition.addEventListener('mousemove', returnPosition);
 console.log(mousePosition);
 
 function returnPosition(e) {
@@ -48,3 +61,5 @@ function returnPosition(e) {
   mousePosition.classList.add('positionColor')
 }
 
+
+// 
