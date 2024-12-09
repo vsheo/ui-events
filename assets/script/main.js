@@ -18,5 +18,13 @@ function flipHandler() {
 }
 
 
-// click rotate
-let rotate2Times = document.querySelector('a:nth-of-type(2)')
+// desktop interaction
+let rotateY360deg = document.querySelector('a:nth-of-type(2)')
+
+rotateY360deg.addEventListener('click', rotateHandler)
+
+function rotateHandler() {
+  rotateY360deg.classList.toggle('rotateY360deg')
+}
+
+
