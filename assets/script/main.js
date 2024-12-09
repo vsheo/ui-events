@@ -28,3 +28,23 @@ function rotateHandler() {
 }
 
 
+// Development interaction
+let mousePosition = document.querySelector('a:nth-of-type(4)')
+
+mousePosition.addEventListener('mousemove', returnPosition)
+console.log(mousePosition);
+
+function returnPosition(e) {
+  // geef de coordinaten van de mouse positie terug
+  x = e.offsetX;
+  y = e.offsetY;
+  console.log(`Mouse coordinates: X: ${x}, Y: ${y}`);
+  // maak de x en y coordinaten tot CSS variables
+  mousePosition.style.setProperty('--x', x)
+  mousePosition.style.setProperty('--y', y)
+  mousePosition.style.setProperty('--z', x-y)
+
+  // css class om de kleur aan te passen
+  mousePosition.classList.add('positionColor')
+}
+
