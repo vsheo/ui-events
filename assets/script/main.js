@@ -53,13 +53,24 @@ function returnPosition(e) {
   y = e.offsetY;
   console.log(`Mouse coordinates: X: ${x}, Y: ${y}`);
   // maak de x en y coordinaten tot CSS variables
-  mousePosition.style.setProperty('--x', x)
-  mousePosition.style.setProperty('--y', y)
-  mousePosition.style.setProperty('--z', x-y)
+  mousePosition.style.setProperty('--x', x);
+  mousePosition.style.setProperty('--y', y);
+  mousePosition.style.setProperty('--z', x-y);
 
   // css class om de kleur aan te passen
-  mousePosition.classList.add('positionColor')
+  mousePosition.classList.add('positionColor');
 }
 
 
-// 
+// Sprint 5 interaction
+let ctrlClick = document.querySelector('a:nth-of-type(5)');
+
+ctrlClick.addEventListener('click', newColor);
+
+function newColor (e) {
+  console.log(e.ctrlKey)
+  // doe dit als de control key gedrukt wordt
+  if (e.ctrlKey) {
+    ctrlClick.classList.add('newColor');
+  }
+}

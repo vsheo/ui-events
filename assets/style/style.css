@@ -136,8 +136,33 @@ a:nth-of-type(12) {
   }
 }
 
+
 /* Development interaction */
 .positionColor {
   /* gebruik de variables die in JS zijn gemaakt */
   background-color: rgb(var(--x), var(--y), var(--z));
+}
+
+
+/* Sprint 5 interaction */
+.newColor {
+  animation-name: newColorAnimation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  transition: background-color 1s;
+}
+
+@keyframes newColorAnimation {
+  0% {
+    transform: rotate(0);
+    background-color: rgb(222, 26, 12);
+  }
+  50% {
+    transform: rotate(180deg);
+    background-color: rgb(255, 193, 7);
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: rgb(222, 26, 12);
+  }
 }
