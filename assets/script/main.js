@@ -185,3 +185,22 @@ function holdTime(link) {
     }
   });
 }
+
+
+// interface interaction
+let screenSize = document.querySelector('a:nth-of-type(10)');
+
+newWindow = window.addEventListener("resize", newColor);
+
+
+function newColor() {
+  let windowWidth = window.innerWidth;
+  if (windowWidth < 1200) {
+    console.log(windowWidth)
+    screenSize.style.setProperty('--x', windowWidth / 8);
+    screenSize.style.setProperty('--y', windowWidth / 12);
+    screenSize.style.setProperty('--z', 0);
+
+    screenSize.classList.add('resizeColor');
+  }
+}

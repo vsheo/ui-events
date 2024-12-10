@@ -255,3 +255,15 @@ a:nth-of-type(12) {
     background-color: inherit;
   }
 }
+
+
+/* interface interaction */
+.resizeColor {
+  background-color: rgb(var(--x), var(--y), var(--z));
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
