@@ -214,3 +214,44 @@ a:nth-of-type(12) {
 .scaling {
   transform: scale(var(--scrolled));
 }
+
+
+/* user interaction */
+.ingedrukt {
+  animation: linkIngedrukt 1s;
+  background-color: rgb(0, 255, 42);
+  /* deze scale zodat de button klein blijf na de keyframe animatie */
+  transform: scale(0.5);
+}
+
+@keyframes linkIngedrukt {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+    background-color: rgb(0, 255, 42);
+  }	
+}
+
+.losGelaten {
+  animation: linkLosGelaten 1s;
+  /* deze background en scale zodat het terug naar de originele grootte en kleur gaat */
+  transform: scale(1);
+  background-color: inherit;
+}
+
+@keyframes linkLosGelaten {
+  0% {
+    transform: scale(0.5);
+    background-color: rgb(0, 255, 42);
+  }
+  50% {
+    transform: scale(1.5);
+    background-color: rgb(255, 119, 0);
+  }
+  100% {
+    transform: scale(1);
+    background-color: inherit;
+  }
+}
