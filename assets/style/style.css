@@ -78,12 +78,14 @@ a:nth-of-type(12) {
   }
 }
 
-/* Jouw animaties */
-
+/* uitleg article */
 article {
   color: white;
-    font-size: medium;
+  font-size: medium;
 }
+
+/* Jouw animaties */
+
 
 /* Frontend interaction */
 .flip180deg {
@@ -223,7 +225,7 @@ article {
 
 /* user interaction */
 .ingedrukt {
-  animation: linkIngedrukt 1s;
+  animation: linkIngedrukt 2s;
   background-color: rgb(0, 255, 42);
   /* deze scale zodat de button klein blijf na de keyframe animatie */
   transform: scale(0.5);

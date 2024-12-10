@@ -71,7 +71,7 @@ function newColor (e) {
   console.log(e.ctrlKey)
   // doe dit als de control key gedrukt wordt
   if (e.ctrlKey) {
-    ctrlClick.classList.add('newColor');
+    ctrlClick.classList.toggle('newColor');
   }
 }
 
