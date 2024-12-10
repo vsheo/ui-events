@@ -190,7 +190,7 @@ function holdTime(link) {
 // interface interaction
 let screenSize = document.querySelector('a:nth-of-type(10)');
 
-newWindow = window.addEventListener("resize", newColor);
+window.addEventListener("resize", newColor);
 
 
 function newColor() {
