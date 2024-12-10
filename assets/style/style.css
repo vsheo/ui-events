@@ -184,3 +184,27 @@ a:nth-of-type(12) {
     transform: translateY(0) rotateY(360deg);
   }
 }
+
+
+/* The interaction */
+.spaceJump {
+  animation: spaceJumpAmination 2s linear infinite;
+  background-color: rgb(var(--r), var(--g), var(--b));
+}
+
+@keyframes spaceJumpAmination {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(1em);
+    /* transition: ease-out; */
+  }
+  75% {
+    transform: translateY(-1em);
+    /* transition: ease-in; */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

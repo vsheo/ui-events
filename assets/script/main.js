@@ -84,6 +84,35 @@ spaceClick.addEventListener('keydown', spaceSpin);
 function spaceSpin (e) {
   // hover op 'fix' +   spacebar
   if (e.key == ' ') {
-    spaceClick.classList.toggle('spinUpDown')
+    spaceClick.classList.toggle('spinUpDown');
   }
+}
+
+
+// the interaction
+let spaceUp = document.querySelector('a:nth-of-type(7)');
+
+spaceUp.addEventListener('keyup', spaceUpJump);
+
+function spaceUpJump (e) {
+  // spacebar 
+  if (e.key == ' ') {
+    spaceUp.classList.toggle('spaceJump');
+  }
+
+  if (spaceUp.classList.contains('spaceJump')) {
+    let varSeconds = getSeconds()
+
+    // maak rgb kleur afkangekijk van hoelang de animation bezig was 
+    spaceUp.style.setProperty('--r', varSeconds * 0.1234);
+    spaceUp.style.setProperty('--g', varSeconds * 1.987);
+    spaceUp.style.setProperty('--b', varSeconds * 0.52354);
+    console.log(getSeconds())
+  }
+}
+
+function getSeconds() {
+  let now = new Date();
+  let seconds = now.getSeconds();
+  return seconds;
 }
