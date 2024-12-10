@@ -166,3 +166,21 @@ a:nth-of-type(12) {
     background-color: rgb(222, 26, 12);
   }
 }
+
+
+/* Fix interaction */
+.spinUpDown {
+  animation: spinUpDown 2s linear infinite;
+}
+
+@keyframes spinUpDown {
+  0% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-1em) rotateY(180deg);
+  }
+  100% {
+    transform: translateY(0) rotateY(360deg);
+  }
+}

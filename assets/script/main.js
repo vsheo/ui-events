@@ -74,3 +74,16 @@ function newColor (e) {
     ctrlClick.classList.add('newColor');
   }
 }
+
+
+// Fix interaction
+let spaceClick = document.querySelector('a:nth-of-type(6)');
+
+spaceClick.addEventListener('keydown', spaceSpin);
+
+function spaceSpin (e) {
+  // hover op 'fix' +   spacebar
+  if (e.key == ' ') {
+    spaceClick.classList.toggle('spinUpDown')
+  }
+}
