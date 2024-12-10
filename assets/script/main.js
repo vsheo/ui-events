@@ -116,3 +116,51 @@ function getSeconds() {
   let seconds = now.getSeconds();
   return seconds;
 }
+
+
+// flow interaction
+let spin = document.querySelector('a:nth-of-type(8)');
+let rotation = 0;
+console.log(spin);
+
+spin.addEventListener('wheel', onscroll);
+spin.classList.add('scaling');
+
+function onscroll() {
+  rotation+=1;
+  // spin.style.transform = `rotateX(${rotation}deg)`;
+  spin.style.setProperty('--scrolled', rotation);
+  console.log(spin);
+}
+// function scrollEnd() {
+//   scrolling = false;
+//   console.log(scrolling);
+// }
+
+
+// function scrolling() {
+//   // scroll event
+//   // spin.classList.toggle('scaling');
+//   let wheelCount = 0
+
+//   console.log(spin);
+
+//   isSpinning = true;
+
+//   if (spin) {
+//     console.log(isSpinning);
+
+//     while (isSpinning == true) {
+//       wheelCount++;
+//       console.log(wheelCount);
+//       isSpinning = false;
+//     }
+//   }
+
+
+
+//   // while (spin == true) {
+//   //   wheelCount++;
+//   //   console.log(wheelCount);
+//   // }
+// }
