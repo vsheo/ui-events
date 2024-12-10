@@ -190,10 +190,10 @@ function holdTime(link) {
 // interface interaction
 let screenSize = document.querySelector('a:nth-of-type(10)');
 
-window.addEventListener("resize", newColor);
+window.addEventListener("resize", linkColor);
 
 
-function newColor() {
+function linkColor() {
   let windowWidth = window.innerWidth;
   if (windowWidth < 1200) {
     console.log(windowWidth)

@@ -80,6 +80,11 @@ a:nth-of-type(12) {
 
 /* Jouw animaties */
 
+article {
+  color: white;
+    font-size: medium;
+}
+
 /* Frontend interaction */
 .flip180deg {
   animation-name: flip180deg;
